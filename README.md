@@ -2,7 +2,7 @@
 
 A four-view Pokémon browser built to get hands-on with the current
 React stack: **Next.js 16 (App Router) · React 19 · TypeScript ·
-Tailwind CSS 4 · Supabase**.
+Tailwind CSS 4**.
 
 **Demo:** _(wklej link po deployu)_
 
@@ -13,20 +13,23 @@ Tailwind CSS 4 · Supabase**.
 | View | What's in it |
 |---|---|
 | **Galeria** | Grid of all Pokémon — image-first browsing |
-| **Pokédex** | Per-Pokémon detail: stats, types, sprites |
+| **Pokédex** | Auto-cycling detail view: stats, type, sprite |
 | **Lista** | Full tabular overview |
-| **Wygaszacz** | Fullscreen screensaver mode, auto-cycling |
+| **Wygaszacz** | Fullscreen screensaver mode |
 
-Data comes from PokéAPI through a server-side route handler, so the
-client never calls the external API directly.
+Pokémon data is served by an internal route handler (`app/api/route.ts`)
+as a fixed dataset — the client components fetch from that endpoint
+rather than holding the data themselves. Sprites are loaded from the
+public PokéAPI sprite repository. The dataset is deliberately static:
+the exercise was about the boundary, not the source.
 
 ## Why it exists
 
-A deliberate exercise, not a product. I wanted a small but complete
-surface to work through the things that actually matter in an App Router
-project: server vs. client component boundaries, typed API responses,
-route handlers as a proxy layer, and shared layout across views with
-genuinely different rendering needs.
+A study project, not a product. I wanted a small but complete surface to
+work through the things that actually matter in an App Router project:
+where the server/client component boundary falls, route handlers as a
+data layer, typed state across views, and one shared layout serving four
+views with genuinely different rendering needs.
 
 Interface text is in Polish.
 
