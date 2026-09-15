@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Pokémon Hub
 
-## Getting Started
+A four-view Pokémon browser built to get hands-on with the current
+React stack: **Next.js 16 (App Router) · React 19 · TypeScript ·
+Tailwind CSS 4 · Supabase**.
 
-First, run the development server:
+**Demo:** _(wklej link po deployu)_
+
+---
+
+## What it does
+
+| View | What's in it |
+|---|---|
+| **Galeria** | Grid of all Pokémon — image-first browsing |
+| **Pokédex** | Per-Pokémon detail: stats, types, sprites |
+| **Lista** | Full tabular overview |
+| **Wygaszacz** | Fullscreen screensaver mode, auto-cycling |
+
+Data comes from PokéAPI through a server-side route handler, so the
+client never calls the external API directly.
+
+## Why it exists
+
+A deliberate exercise, not a product. I wanted a small but complete
+surface to work through the things that actually matter in an App Router
+project: server vs. client component boundaries, typed API responses,
+route handlers as a proxy layer, and shared layout across views with
+genuinely different rendering needs.
+
+Interface text is in Polish.
+
+## Running it
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Opens on `http://localhost:3000`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Adrian Wojtasik · [eyelingo.app](https://eyelingo.app)
