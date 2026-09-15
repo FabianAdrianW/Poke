@@ -4,7 +4,6 @@ A four-view Pokémon browser built to get hands-on with the current
 React stack: **Next.js 16 (App Router) · React 19 · TypeScript ·
 Tailwind CSS 4**.
 
-**Demo:** _(wklej link po deployu)_
 
 ---
 
